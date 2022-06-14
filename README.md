@@ -1,4 +1,5 @@
 # norwegian-holidays
+A simple repo that finds the norwegian holidays for a given year
 
 ## Technologies used
 * Kotlin

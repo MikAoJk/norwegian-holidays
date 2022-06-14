@@ -18,7 +18,7 @@ internal class NorwegianHolidaysTest {
     @Test
     internal fun easterDay2022ShouldBe17april() {
         val expectedEasterDayFor2022 = LocalDate.of(2022, 4, 17)
-        val easterDay = getEasterDay(2022)
+        val easterDay = getNorwegianHolidays(2022).find { it.name == "1. påskedag" }?.date
 
         assertEquals(expectedEasterDayFor2022, easterDay)
     }

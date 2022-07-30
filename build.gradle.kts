@@ -5,11 +5,11 @@ group = "io.github.MikAoJk"
 version = "1.0.0"
 
 val junitJupiterVersion = "5.8.2"
-val kotlinVersion = "1.7.0"
+val kotlinVersion = "1.7.10"
 val javaVersion = "17"
 
 plugins {
-    kotlin("jvm") version "1.7.0"
+    kotlin("jvm") version "1.7.10"
 }
 
 repositories {

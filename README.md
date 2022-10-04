@@ -22,7 +22,10 @@ Find the newest version of gradle here: https://gradle.org/releases/ Then run th
 ```
 val year = 2022
 val easterDay = getNorwegianHolidays(year).find { it.name == "1. påskedag" }?.date
+
+println("Easter day for 2022 is: $easterDay")
 ```
 
-## Inquiries
-Questions related to the code or project can be asked as issues here on GitHub.
+### Contact
+
+Questions and/or feature requests? Please create an [issue](https://github.com/MikAoJk/norwegian-holidays/issues).

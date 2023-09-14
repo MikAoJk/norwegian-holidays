@@ -5,11 +5,11 @@ group = "io.github.MikAoJk"
 version = "1.0.0"
 
 val junitJupiterVersion = "5.9.2"
-val kotlinVersion = "1.9.0"
+val kotlinVersion = "1.9.10"
 val javaVersion = "17"
 
 plugins {
-    kotlin("jvm") version "1.9.0"
+    kotlin("jvm") version "1.9.10"
 }
 
 repositories {
@@ -24,20 +24,14 @@ dependencies {
 }
 
 tasks {
-    withType<KotlinCompile> {
-        kotlinOptions.jvmTarget = javaVersion
-    }
 
-    withType<Javadoc> {
-        (options as StandardJavadocDocletOptions).addBooleanOption("html5", true)
-    }
-
-    withType<Test> {
-        useJUnitPlatform()
+    test {
+        useJUnitPlatform {}
         testLogging {
             events("skipped", "failed")
             showStackTraces = true
             exceptionFormat = org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
         }
     }
+
 }

@@ -3,6 +3,7 @@ A simple repo that finds the norwegian holidays for a given year
 
 [![Build and test](https://github.com/MikAoJk/norwegian-holidays/actions/workflows/build-and-test.yml/badge.svg?branch=main)](https://github.com/MikAoJk/norwegian-holidays/actions/workflows/build-and-test.yml)
 [![Validate Gradle Wrapper](https://github.com/MikAoJk/norwegian-holidays/actions/workflows/gradle-wrapper-validation.yml/badge.svg?branch=main)](https://github.com/MikAoJk/norwegian-holidays/actions/workflows/gradle-wrapper-validation.yml)
+![GitHub Release](https://img.shields.io/github/v/release/MikAoJk/norwegian-holidays)
 
 ## Technologies used
 * Kotlin

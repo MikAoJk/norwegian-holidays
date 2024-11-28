@@ -1,16 +1,15 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
+import com.vanniktech.maven.publish.SonatypeHost
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 group = "io.github.MikAoJk"
-version = "1.0.0"
+version = System.getenv("NEW_VERSION") ?: "1.0.0"
 
-val junitJupiterVersion = "5.10.2"
-val kotlinVersion = "1.9.23"
-val javaVersion = JavaVersion.VERSION_21
+val junitJupiterVersion = "5.11.3"
+val kotlinVersion = "2.1.0"
 
 plugins {
-    kotlin("jvm") version "1.9.23"
-    `maven-publish`
+    kotlin("jvm") version "2.1.0"
+    id("com.vanniktech.maven.publish") version "0.30.0"
 }
 
 repositories {
@@ -24,33 +23,52 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion")
 }
 
-publishing {
-    repositories {
-        maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/MikAoJk/norwegian-holidays")
-            credentials {
-                username = System.getenv("GITHUB_USERNAME")
-                password = System.getenv("GITHUB_PASSWORD")
-            }
-        }
-    }
-    publications {
-        create<MavenPublication>("mavenJava") {
-            from(components["java"])
-        }
+kotlin {
+    compilerOptions {
+        jvmTarget.set(JvmTarget.JVM_21)
     }
 }
 
+mavenPublishing {
+    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL, automaticRelease = true)
+    signAllPublications()
+
+    coordinates(group.toString(), "norwegian-holidays", version.toString())
+
+    pom {
+        name.set("norwegian-holidays")
+        description.set("Library for validating a norwegian holidays")
+        url.set("https://github.com/MikAoJk/norwegian-holidays")
+        inceptionYear.set("2024")
+        licenses {
+            license {
+                name.set("MIT License")
+                url.set("https://opensource.org/licenses/MIT")
+                distribution.set("https://github.com/MikAoJk/norwegian-holidays.git")
+            }
+        }
+
+        developers {
+            developer {
+                id.set("MikAoJk")
+                name.set("Joakim Taule Kartveit")
+                email.set("joakimkartveit@gmail.com")
+                url.set("https://github.com/MikAoJk/")
+            }
+        }
+
+        scm {
+            connection.set("scm:git:git://github.com/MikAoJk/norwegian-holidays.git")
+            developerConnection.set("scm:git:https://github.com/MikAoJk/norwegian-holidays.git")
+            url.set("https://github.com/MikAoJk/norwegian-holidays")
+        }
+        version = System.getenv("NEW_VERSION")
+    }
+
+}
+
+
 tasks {
-
-    compileKotlin {
-        kotlinOptions.jvmTarget = javaVersion.toString()
-    }
-    compileTestKotlin {
-        kotlinOptions.jvmTarget = javaVersion.toString()
-    }
-
     test {
         useJUnitPlatform {}
         testLogging {

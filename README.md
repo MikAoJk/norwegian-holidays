@@ -15,6 +15,22 @@ A simple repo that finds the norwegian holidays for a given year
 To build locally and run the integration tests you can simply run `./gradlew clean build` or on windows
 `gradlew.bat clean build`
 
+## Using the library
+### import
+Gradle(kotlin)
+```
+implementation("io.github.mikaojk:norwegian-holidays:1.0.2")
+```
+
+Maven
+```
+<dependency>
+  <groupId>io.github.mikaojk</groupId>
+  <artifactId>norwegian-holidays</artifactId>
+  <version>1.0.2</version>
+</dependency>
+```
+
 ### Upgrading the gradle wrapper
 Find the newest version of gradle here: https://gradle.org/releases/ Then run this command:
 

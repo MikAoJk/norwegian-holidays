@@ -30,19 +30,19 @@ Maven
   <version>1.0.2</version>
 </dependency>
 ```
-
-### Upgrading the gradle wrapper
-Find the newest version of gradle here: https://gradle.org/releases/ Then run this command:
-
-```./gradlew wrapper --gradle-version $gradleVersjon```
-
-### Usage
+### Example usage
 ```
 val year = 2022
 val easterDay = getNorwegianHolidays(year).find { it.name == "1. påskedag" }?.date
 
 println("Easter day for 2022 is: $easterDay")
 ```
+
+### Upgrading the gradle wrapper
+Find the newest version of gradle here: https://gradle.org/releases/ Then run this command:
+
+```./gradlew wrapper --gradle-version $gradleVersjon```
+
 
 ### Contact
 

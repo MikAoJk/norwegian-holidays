@@ -12,7 +12,7 @@ A simple repo that finds the norwegian holidays for a given year
 * JDK 21
 
 #### Build and run tests
-To build locally and run the integration tests you can simply run `./gradlew clean build` or on windows
+To build locally and run the unit tests you can simply run `./gradlew clean build` or on windows
 `gradlew.bat clean build`
 
 ## Using the library

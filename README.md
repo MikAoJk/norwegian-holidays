@@ -32,6 +32,8 @@ Maven
 ```
 ### Example usage
 ```
+import io.github.mikaojk.holiday
+
 val year = 2022
 val easterDay = getNorwegianHolidays(year).find { it.name == "1. påskedag" }?.date
 

@@ -32,19 +32,18 @@ Maven
 ```
 ### Example usage
 ```
-import io.github.mikaojk.holiday
+import io.github.mikaojk.holiday.getNorwegianHolidays
 
-val year = 2022
-val easterDay = getNorwegianHolidays(year).find { it.name == "1. påskedag" }?.date
+val year = 2025
+val easterDay2025 = getNorwegianHolidays(year).find { norwegianHoliday -> norwegianHoliday.name == "1. påskedag" }?.date
 
-println("Easter day for 2022 is: $easterDay")
+println("Easter day for 2022 is: easterDay2025")
 ```
 
 ### Upgrading the gradle wrapper
 Find the newest version of gradle here: https://gradle.org/releases/ Then run this command:
 
 ```./gradlew wrapper --gradle-version $gradleVersjon```
-
 
 ### Contact
 

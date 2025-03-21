@@ -8,7 +8,7 @@ val junitJupiterVersion = "5.12.1"
 val kotlinVersion = "2.1.20"
 
 plugins {
-    kotlin("jvm") version "2.1.10"
+    kotlin("jvm") version "2.1.20"
     id("com.vanniktech.maven.publish") version "0.31.0"
 }
 

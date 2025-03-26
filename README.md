@@ -17,20 +17,24 @@ To build locally and run the unit tests you can simply run `./gradlew clean buil
 
 ## Using the library
 ### import
-Gradle(kotlin)
+> **Note**
+> Find the newest version of the library here: https://central.sonatype.com/artifact/io.github.mikaojk/norwegian-holidays
+> and swap it out with the version(1.0.5) in the examples below
+
+#### Gradle(Kotlin)
 ```
-implementation("io.github.mikaojk:norwegian-holidays:1.0.2")
+implementation("io.github.mikaojk:norwegian-holidays:1.0.5")
 ```
 
-Maven
+#### Apache Maven
 ```
 <dependency>
   <groupId>io.github.mikaojk</groupId>
   <artifactId>norwegian-holidays</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.5</version>
 </dependency>
 ```
-### Example usage
+### Example usage kotlin
 ```
 import io.github.mikaojk.holiday.getNorwegianHolidays
 

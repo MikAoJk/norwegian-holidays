@@ -20,9 +20,6 @@ dependencies {
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
-kotlin {
-    jvmToolchain(25)
-}
 
 mavenPublishing {
     publishToMavenCentral(automaticRelease = true)

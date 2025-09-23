@@ -23,9 +23,7 @@ dependencies {
 }
 
 kotlin {
-    compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_25)
-    }
+    jvmToolchain(25)
 }
 
 mavenPublishing {

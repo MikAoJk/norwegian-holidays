@@ -32,4 +32,4 @@ jobs:
           ./gradlew test
       - name: Run clean build
         run: |
-          ./gradlew clean build
+          ./gradlew clean build -x test

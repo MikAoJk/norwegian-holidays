@@ -16,11 +16,11 @@ jobs:
             - uses: actions/setup-java@v5
               with:
                   distribution: 'temurin'
-                  java-version: '25'
+                  java-version: '21'
                   cache: 'gradle'
             - name: Run tests
               run: |
                 ./gradlew test
             - name: Run clean build
               run: |
-                ./gradlew clean build
+                ./gradlew clean build -x test

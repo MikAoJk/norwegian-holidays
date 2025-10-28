@@ -4,10 +4,10 @@ group = "io.github.mikaojk"
 version = System.getenv("NEW_VERSION") ?: "1.0.0"
 
 val junitJupiterVersion = "6.0.0"
-val kotlinVersion = "2.2.21"
+val kotlinVersion = "2.3.0-Beta2"
 
 plugins {
-    kotlin("jvm") version "2.2.21"
+    kotlin("jvm") version "2.3.0-Beta2"
     id("com.vanniktech.maven.publish") version "0.34.0"
 }
 

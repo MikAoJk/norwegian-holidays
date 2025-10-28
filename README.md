@@ -9,7 +9,7 @@ A simple library that finds the norwegian holidays for a given year
 ## Technologies used
 * Kotlin
 * Gradle
-* JDK 21
+* JDK 25
 
 #### Build and run tests
 To build locally and run the unit tests you can simply run `./gradlew clean build` or on windows

@@ -8,7 +8,7 @@ val kotlinVersion = "2.3.0-Beta2"
 
 plugins {
     kotlin("jvm") version "2.3.0-Beta2"
-    id("com.vanniktech.maven.publish") version "0.34.0"
+    id("com.vanniktech.maven.publish") version "0.35.0"
 }
 
 repositories {

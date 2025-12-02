@@ -19,7 +19,7 @@ To build locally and run the unit tests you can simply run `./gradlew clean buil
 ### import
 > **Note**
 > Find the newest version of the libary here: https://central.sonatype.com/artifact/io.github.mikaojk/norwegian-holidays
-> and swap it out with the version(1.0.5) in the examples below
+> and swap it out with the version: 1.0.5 in the examples below
 
 #### Gradle(Kotlin)
 ```

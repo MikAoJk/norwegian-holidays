@@ -10,7 +10,7 @@ val ktfmtVersion = "0.44"
 
 plugins {
     kotlin("jvm") version "2.3.21"
-    id("com.diffplug.spotless") version "8.5.1"
+    id("com.diffplug.spotless") version "8.6.0"
     id("com.vanniktech.maven.publish") version "0.36.0"
 }
 

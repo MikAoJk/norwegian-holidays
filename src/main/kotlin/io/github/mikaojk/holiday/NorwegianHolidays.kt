@@ -45,6 +45,6 @@ fun getEasterDay(year: Int): LocalDate {
 }
 
 data class NorwegianHoliday(
-    val name: String,
-    val date: LocalDate
-)
+    override val name: String,
+    override val date: LocalDate
+) : Holiday

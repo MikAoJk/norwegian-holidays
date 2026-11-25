@@ -14,13 +14,13 @@ fun getNorwegianHolidays(year: Int): List<NorwegianHoliday> {
     val constitutionDay = NorwegianHoliday(name = "Grunnlovsdagen", date = LocalDate.of(year, 5, 17))
     val christsAscension = NorwegianHoliday(name = "Kristi Himmelfartsdag", date = easterDayDate.plusDays(39))
     val firstdayOfPentecost = NorwegianHoliday(name = "1. pinsedag", date = easterDayDate.plusDays(49))
-    val secounDayOfPentecost = NorwegianHoliday(name = "2. pinsedag", date = easterDayDate.plusDays(50))
+    val secondDayOfPentecost = NorwegianHoliday(name = "2. pinsedag", date = easterDayDate.plusDays(50))
     val firstofChristmas = NorwegianHoliday(name = "1. juledag", date = LocalDate.of(year, 12, 25))
     val secounofChristmas = NorwegianHoliday(name = "2. juledag", date = LocalDate.of(year, 12, 26))
 
     return listOf(
         firstNewYearsDay, maundyThursday, goodFriday, easterDay, secoundEasterDay, laborDay, constitutionDay,
-        christsAscension, firstdayOfPentecost, secounDayOfPentecost, firstofChristmas, secounofChristmas
+        christsAscension, firstdayOfPentecost, secondDayOfPentecost, firstofChristmas, secounofChristmas
     )
 
 }
